@@ -1,0 +1,7 @@
+<button [routerLink]="['/users/detail/new']">add new user</button>
+
+<ul>
+    <ng-container *ngFor="let item of userList">    
+        <li><a [routerLink]="['/users/detail', item.id]">{{item.firstName}} {{item.lastName}}</a>  <button (click)="DeleteUser(item.id)">Delete</button></li>
+    </ng-container>
+</ul>

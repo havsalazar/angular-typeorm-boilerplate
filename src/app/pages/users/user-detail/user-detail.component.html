@@ -1,0 +1,12 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="userForm">
+    Firstname <input type="text" formControlName="firstName">
+    
+    <br>
+    Lastname <input type="text" formControlName="lastName">
+    <br>
+    Active
+    <button type="submit" [disabled]="userForm.invalid">
+        {{ userForm.value.id ? "Update" : "Create" }}
+    </button>
+
+</form>
